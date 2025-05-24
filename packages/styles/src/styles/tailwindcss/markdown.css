@@ -82,3 +82,7 @@
 .aui-code-header-language {
   @apply lowercase [&>span]:text-xs;
 }
+
+.aui-mermaid-diagram {
+  @apply bg-muted rounded-b-lg;
+}
