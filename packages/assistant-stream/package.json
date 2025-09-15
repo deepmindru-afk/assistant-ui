@@ -1,6 +1,12 @@
 {
   "name": "assistant-stream",
+<<<<<<< ours
+  "version": "0.2.25-alpha.1",
+||||||| ancestor
+  "version": "0.2.24",
+=======
   "version": "0.2.25",
+>>>>>>> theirs
   "license": "MIT",
   "type": "module",
   "exports": {

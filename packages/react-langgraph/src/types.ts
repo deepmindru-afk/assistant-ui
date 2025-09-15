@@ -44,6 +44,14 @@ type MessageContentToolUse = {
   type: "tool_use" | "input_json_delta";
 };
 
+type MessageContentComputerCall = {
+  type: "computer_call";
+  call_id: string;
+  id: string;
+  name: string;
+  action: unknown;
+};
+
 export enum LangGraphKnownEventTypes {
   Messages = "messages",
   MessagesPartial = "messages/partial",
@@ -64,7 +72,8 @@ type AssistantMessageContentComplex =
   | MessageContentImageUrl
   | MessageContentToolUse
   | MessageContentReasoning
-  | MessageContentThinking;
+  | MessageContentThinking
+  | MessageContentComputerCall;
 
 type UserMessageContent = string | UserMessageContentComplex[];
 type AssistantMessageContent = string | AssistantMessageContentComplex[];

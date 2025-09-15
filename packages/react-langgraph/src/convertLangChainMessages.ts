@@ -51,6 +51,9 @@ const contentToParts = (content: LangChainMessage["content"]) => {
           case "input_json_delta":
             return null;
 
+          case "computer_call":
+            return null;
+
           default:
             const _exhaustiveCheck: never = type;
             throw new Error(`Unknown message part type: ${_exhaustiveCheck}`);
