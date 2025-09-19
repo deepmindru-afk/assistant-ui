@@ -13,7 +13,7 @@ export const maxDuration = 30;
 
 export async function POST(req: Request) {
   const { messages, tools } = await req.json();
-  const ip = req.headers.get("x-forwarded-for") ?? "ip";
+  //const ip = req.headers.get("x-forwarded-for") ?? "ip";
   //const { success } = await ratelimit.limit(ip);
 
   //if (!success) {
