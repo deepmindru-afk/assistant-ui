@@ -36,13 +36,13 @@ export default function HomePage() {
 
       <Button variant="outline" className="mx-auto mt-6 flex" asChild>
         <Link href="/examples">
-          View our other examples <ArrowRight />
+          Смотреть примеры <ArrowRight />
         </Link>
       </Button>
 
       <div className="mt-20 flex flex-col items-center gap-4">
         <h1 className="text-center text-2xl font-medium">
-          Trusted by fast-growing companies
+          Доверия быстрорастущих компаний
         </h1>
         <Logos />
       </div>
@@ -50,26 +50,25 @@ export default function HomePage() {
       <div className="my-20 flex flex-col gap-6">
         <div className="flex flex-col items-center gap-3 self-center sm:w-full sm:self-start lg:w-[unset] lg:self-center">
           <h1 className="self-start text-2xl font-medium sm:self-center">
-            Be part of the community
+            Встаньте частью сообщества
           </h1>
           <p>
-            1000+ developers are building with assistant-ui, you&apos;re in good
-            company!
+            Присоединяйтесь к разработке на основе решений АО Портал
           </p>
 
           <div className="my-2 flex w-full flex-col gap-4 sm:grid sm:grid-cols-2">
             <a
               className={buttonVariants({ variant: "outline" })}
-              href="https://discord.gg/S9dwgCNEFs"
+              href="https://www.portalos.ru"
             >
               <DiscordLogoIcon className="mr-2 size-4 text-indigo-600" /> Join
               our Discord
             </a>
             <a
               className={buttonVariants({ variant: "outline" })}
-              href="https://github.com/assistant-ui/assistant-ui"
+              href="https://www.portalos.ru"
             >
-              <span className="mr-2">🌟</span> Star us on GitHub
+              <span className="mr-2">🌟</span> поставьте нам звезду
             </a>
           </div>
         </div>
@@ -85,10 +84,10 @@ export default function HomePage() {
         <div className="flex justify-center">
           <div className="relative flex h-max w-full flex-col items-center justify-between gap-5 rounded-3xl border p-6 sm:w-max sm:flex-row sm:p-10 lg:h-32 lg:w-full lg:px-16">
             <p className="text-center text-2xl font-bold">
-              Build conversational AI interfaces
+              Разрабатываем диалоговые интерфейсы с использованием ИИ-агентов
             </p>
             <Button asChild className="w-full sm:w-[unset]">
-              <Link href="/docs/getting-started">Get Started</Link>
+              <Link href="/docs/getting-started">Начать</Link>
             </Button>
           </div>
         </div>
@@ -101,15 +100,15 @@ function Hero() {
   return (
     <div className="relative z-[2] flex flex-col overflow-hidden px-6 py-12 text-center md:pt-16">
       <h1 className="mb-8 text-4xl font-medium md:hidden">
-        UX of ChatGPT in your own app
+        Интерфейс ChatGPT в вашем приложении
       </h1>
       <h1 className="mb-8 text-5xl font-medium max-md:hidden">
-        UX of ChatGPT in your own app
+        Интерфейс ChatGPT в вашем приложении
       </h1>
       <p className="mb-8 text-muted-foreground md:text-xl">
-        assistant-ui is the TypeScript/React library for{" "}
+        Платформа портал – библиотека для разработки решений на основе ИИ{" "}
         <span className="text-foreground">AI Chat</span>.<br />
-        Built on <span className="text-foreground">shadcn/ui</span> and{" "}
+        Сделано на основе <span className="text-foreground">shadcn/ui</span> и{" "}
         <span className="text-foreground">Tailwind</span>.
       </p>
 
@@ -117,7 +116,7 @@ function Hero() {
         <CopyCommandButton />
 
         <a
-          href="https://cal.com/simon-farshid/assistant-ui"
+          href="https://www.portalos.ru"
           className={cn(
             buttonVariants({
               size: "lg",
@@ -126,13 +125,13 @@ function Hero() {
             }),
           )}
         >
-          Contact Sales
+          Связаться с отделом продаж
         </a>
       </div>
 
       <div className="mt-8 text-muted-foreground">
         <p>
-          Backed by{" "}
+          При поддержке{" "}
           <Image
             src={ycombinator}
             alt="Y Combinator"
@@ -158,22 +157,22 @@ const Logos = () => {
     <div className="flex w-full items-center justify-around rounded pt-6">
       <Image
         src={langchain}
-        alt="Langchain"
+        alt="Apple"
         className="inline-block h-[28px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
         src={athenaintel}
-        alt="Athena Intelligence"
+        alt="Microsoft"
         className="inline-block h-11 w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
         src={browseruse}
-        alt="Browseruse"
+        alt="IBM"
         className="inline-block h-[26px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
         src={entelligence}
-        alt="Entelligence"
+        alt="SpaceX"
         className="mt-1 inline-block h-[22px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
