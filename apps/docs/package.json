@@ -17,6 +17,7 @@
     "tailwindStylesheet": "app/globals.css"
   },
   "dependencies": {
+    "@stackframe/init-stack":"latest",
     "@ai-sdk/openai": "^2.0.15",
     "@ai-sdk/provider": "^2.0.0",
     "@ai-sdk/react": "^2.0.15",
