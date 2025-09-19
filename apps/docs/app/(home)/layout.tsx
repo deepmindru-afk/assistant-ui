@@ -37,25 +37,25 @@ function Footer(): React.ReactElement {
               className="inline size-7 dark:hue-rotate-180 dark:invert"
             />
             <span className="text-2xl font-medium text-black dark:text-white">
-              assistant-ui
+              Portal-chatui
             </span>
           </Link>
           <div className="flex gap-4">
-            <Link href="https://x.com/assistantui" target="_blank">
+            <Link href="https://www.portalos.ru" target="_blank">
               <Image
                 src={xIcon}
                 alt="X icon"
                 className="inline size-5 opacity-30 transition-opacity hover:opacity-100 dark:hue-rotate-180 dark:invert"
               />
             </Link>
-            <Link href="https://github.com/assistant-ui" target="_blank">
+            <Link href="https://www.portalos.ru" target="_blank">
               <Image
                 src={githubIcon}
                 alt="GitHub icon"
                 className="inline size-5 opacity-30 transition-opacity hover:opacity-100 dark:hue-rotate-180 dark:invert"
               />
             </Link>
-            <Link href="https://discord.gg/S9dwgCNEFs" target="_blank">
+            <Link href="https://www.portalos.ru" target="_blank">
               <Image
                 src={discordIcon}
                 alt="Discord icon"
@@ -65,28 +65,28 @@ function Footer(): React.ReactElement {
           </div>
           <div className="flex-grow" />
           <p className="text-sm text-foreground/30">
-            &copy; {new Date().getFullYear()} AgentbaseAI Inc.
+            &copy; {new Date().getFullYear()} АО Портал.
           </p>
         </div>
         <div className="mt-10 grid grid-cols-2 items-start gap-10 sm:mt-0">
           <div className="flex w-[160px] flex-col justify-center gap-4">
-            <p className="text-sm">Product</p>
-            <FooterLink href="/docs/getting-started">Documentation</FooterLink>
-            <FooterLink href="/showcase">Showcase</FooterLink>
-            <FooterLink href="/examples">Examples</FooterLink>
-            <FooterLink href="/pricing">Pricing</FooterLink>
+            <p className="text-sm">Решение</p>
+            <FooterLink href="/docs/getting-started">Документация</FooterLink>
+            <FooterLink href="/showcase">Витрина</FooterLink>
+            <FooterLink href="/examples">Примеры</FooterLink>
+            <FooterLink href="/pricing">Цены</FooterLink>
           </div>
           <div className="flex flex-col justify-center gap-4">
-            <p className="text-sm">Company</p>
-            <FooterLink href="https://cal.com/simon-farshid/assistant-ui">
-              Contact Sales
+            <p className="text-sm">О компании</p>
+            <FooterLink href="https://www.portalos.ru">
+              Контакты
             </FooterLink>
-            <FooterLink href="/blog">Blog</FooterLink>
-            <FooterLink href="https://docs.google.com/document/d/1EhtzGCVOFGtDWaRP7uZ4gBpDVzUfuCF23U6ztRunNRo/view">
-              Terms of Service
+            <FooterLink href="/blog">Блог</FooterLink>
+            <FooterLink href="https://www.portalos.ru">
+              Условия сервиса
             </FooterLink>
-            <FooterLink href="https://docs.google.com/document/d/1rTuYeC2xJHWB5u42dSyWwp3vBx7Cms5b6sK971wraVY/view">
-              Privacy Policy
+            <FooterLink href="https://www.portalos.ru">
+              Политика конфиденциальности
             </FooterLink>
           </div>
 
