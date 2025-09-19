@@ -10,7 +10,7 @@ export default function Page(): React.ReactElement {
 
   return (
     <main className="mx-auto w-full max-w-screen-sm p-4 py-12">
-      <h1 className="mb-4 px-4 pb-2 text-4xl font-bold">assistant-ui Blog</h1>
+      <h1 className="mb-4 px-4 pb-2 text-4xl font-bold">Наш блог</h1>
       <div className="flex flex-col">
         {posts.map((post: BlogPage) => (
           <Link
