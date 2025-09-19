@@ -1,10 +1,18 @@
-import { openai } from "@ai-sdk/openai";
+import { createOpenAI } from "@ai-sdk/openai";
 import { convertToModelMessages, stepCountIs, streamText } from "ai";
 //import { kv } from "@vercel/kv";
 //import { Ratelimit } from "@upstash/ratelimit";
 import { frontendTools } from "@assistant-ui/react-ai-sdk";
 
 export const maxDuration = 30;
+
+const openai = createOpenAI({
+  baseURL: "https://llm.portalos.online",
+  //apiKey:
+  //headers: {
+  //  'header-name': 'header-value',
+  //},
+});
 
 //const ratelimit = new Ratelimit({
 //  redis: kv,
