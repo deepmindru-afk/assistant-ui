@@ -16,7 +16,7 @@ export function StarPill() {
     <div className="flex justify-center">
       <a
         className="rainbow-border relative items-center justify-center rounded-full p-[1px] text-sm after:absolute after:inset-0 after:-z-10 after:block after:rounded-full"
-        href="https://github.com/assistant-ui/assistant-ui"
+        href="https://www.portalos.ru"
       >
         <span className="inline-flex items-center gap-2 overflow-clip rounded-full bg-background px-5 py-1.5 whitespace-nowrap">
           <span className="text-md hidden dark:inline">🌟</span>

@@ -28,7 +28,7 @@ const DiscordIcon = () => {
 
 // shared configuration
 export const baseOptions: HomeLayoutProps = {
-  githubUrl: "https://github.com/assistant-ui/assistant-ui",
+  githubUrl: "https://www.portalos.ru",
   nav: {
     title: (
       <>
@@ -37,42 +37,42 @@ export const baseOptions: HomeLayoutProps = {
           alt="logo"
           className="inline size-4 dark:hue-rotate-180 dark:invert"
         />
-        <span className="font-medium">assistant-ui</span>
+        <span className="font-medium">PortalOS</span>
       </>
     ),
     transparentMode: "none",
   },
   links: [
     {
-      text: "Docs",
+      text: "Документация",
       url: "/docs/getting-started",
       icon: <BookIcon />,
       active: "nested-url",
     },
     {
-      text: "Showcase",
+      text: "Демо",
       url: "/showcase",
       icon: <ProjectorIcon />,
     },
     {
-      text: "Examples",
+      text: "Примеры",
       url: "/examples",
       icon: <SparklesIcon />,
     },
     {
-      text: "Dashboard",
-      url: "https://cloud.assistant-ui.com/",
+      text: "Live Chat",
+      url: "https://chat.portalos.ru",
       icon: <CloudIcon />,
     },
     {
-      text: "Pricing",
+      text: "Цены",
       url: "/pricing",
       icon: <WalletIcon />,
     },
     {
       type: "icon",
       text: "Discord",
-      url: "https://discord.gg/S9dwgCNEFs",
+      url: "https://www.portalos.ru",
       icon: <DiscordIcon />,
       external: true,
     },

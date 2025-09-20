@@ -27,7 +27,7 @@ export default function Page(props: {
           href="/blog"
           className={buttonVariants({ size: "sm", variant: "ghost" })}
         >
-          Back
+          Назад
         </Link>
         {!!page.data.date && (
           <p className="text-xs text-gray-500">
@@ -66,13 +66,13 @@ export default function Page(props: {
       <div className="mx-auto mb-20 flex w-full max-w-screen-sm items-start gap-3">
         <Image
           src={profilePic}
-          alt="Simon Farshid"
+          alt="АО Портал"
           width={32}
           height={32}
           className="size-8 rounded-full"
         />
         <div className="mt-1.5 flex flex-col">
-          <span className="text-sm font-medium">Simon Farshid</span>
+          <span className="text-sm font-medium">АО Портал</span>
         </div>
       </div>
     </main>

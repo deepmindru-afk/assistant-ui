@@ -25,60 +25,60 @@ const EXAMPLE_ITEMS: ShowcaseItem[] = [
     link: "/examples/form-demo",
   },
   {
-    title: "ChatGPT Clone",
+    title: "Клон ChatGPT",
     image: "/screenshot/examples/chatgpt.png",
-    description: "Customized colors and styles for a ChatGPT look and feel.",
+    description: "Аналог интерфейса нейросети ChatGPT",
     link: "/examples/chatgpt",
   },
   {
-    title: "Claude Clone",
+    title: "Клон Claude",
     image: "/screenshot/examples/claude.png",
-    description: "Customized colors and styles for a Claude look and feel.",
+    description: "Аналог интерфейса нейросети Claude",
     link: "/examples/claude",
   },
   {
-    title: "Perplexity Clone",
+    title: "Клон Perplexity",
     image: "/screenshot/examples/chatgpt.png",
-    description: "Customized colors and styles for a Perplexity look and feel.",
+    description: "Аналог интерфейса проекта Perplexity",
     link: "/examples/perplexity",
   },
   {
-    title: "AI SDK",
+    title: "AI",
     image: "/screenshot/examples/ai-sdk.png",
-    description: "Chat persistence with AI SDK.",
+    description: "Конфигурируемые интерфейсы Чатов",
     link: "/examples/ai-sdk",
   },
   {
-    title: "Mem0 - ChatGPT with memory",
+    title: "Агент с постоянной памятью и навыками",
     image: "/screenshot/examples/mem0.png",
     description:
-      "A personalized AI chat app powered by Mem0 that remembers your preferences, facts, and memories.",
+      "Персонализированный агент с постоянной памятью и навыками.",
     link: "/examples/mem0",
   },
   {
-    title: "LangGraph Stockbroker",
+    title: "Stockbroker",
     image: "/screenshot/stockbroker.png",
-    description: "A stockbroker showing human in the loop with LangGraph",
+    description: "Агент помогающий человеку в выборе решений по акциям",
     link: "/examples/stockbroker",
   },
   {
-    title: "Artifacts",
+    title: "Артефакты",
     image: "/screenshot/examples/artifacts.png",
     description:
-      "Open Source Claude Artifacts. You can ask the bot to generate websites.",
+      "Аналог Claude Artifacts. Да можете просить агента создавать сайты.",
     link: "/examples/artifacts",
   },
   {
     title: "Open Canvas",
     image: "/screenshot/open-canvas.png",
-    description: "OSS implementation of ChatGPT's Canvas.",
+    description: "Аналог ChatGPT's Canvas.",
     link: "https://github.com/langchain-ai/open-canvas",
   },
   {
-    title: "FastAPI + LangGraph",
+    title: "FastAPI",
     image: "/screenshot/examples/fastapi-langgraph.png",
     description:
-      "Integration of a FastAPI + LangGraph server with assistant-ui.",
+      "Интеграция с FastAPI",
     link: "https://github.com/Yonom/assistant-ui-langgraph-fastapi",
   },
 ];
@@ -97,9 +97,9 @@ export default function Component() {
         </div>
 
         <div className="my-20 flex flex-col items-center gap-6">
-          <h2 className="text-4xl font-bold">Looking for more examples?</h2>
+          <h2 className="text-4xl font-bold">Ищите больше примеров?</h2>
           <Button asChild>
-            <a href="/showcase">Check out the community showcase!</a>
+            <a href="/showcase">Посмотрите также на примеры сообщества!</a>
           </Button>
         </div>
       </div>

@@ -11,13 +11,13 @@ export default function HomePage() {
     <main className="container mx-auto flex flex-col gap-6 self-stretch py-4">
       <div className="mt-12 flex flex-col gap-4 self-center">
         <h1 className="text-center text-4xl font-extrabold">
-          shadcn/ui for AI chat
+          shadcn/ui дизайн для чатов с агентами
         </h1>
       </div>
 
       <div className="mb-8 flex justify-center gap-2">
         <Button asChild>
-          <Link href="/docs/getting-started">Get Started</Link>
+          <Link href="/docs/getting-started">Начать сейчас</Link>
         </Button>
       </div>
       <div className="mx-auto flex w-full max-w-screen-xl flex-col">
