@@ -19,7 +19,7 @@ export default async function Page(props: {
     notFound();
   }
 
-  const path = `apps/docs/content/docs/${page.file.path}`;
+  //const path = `apps/docs/content/docs/${page.file.path}`;
 
   const footer = (
     <a
