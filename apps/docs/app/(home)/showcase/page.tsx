@@ -108,12 +108,12 @@ export default function Component() {
       <div className="mx-auto max-w-7xl px-4 py-8">
         <header className="mt-12 mb-28 text-center">
           <div className="text-sm tracking-wider text-muted-foreground uppercase">
-            COMMUNITY SHOWCASE
+            Примеры сообщества
           </div>
           <h1 className="mt-4 text-5xl font-bold">
-            Built with
+            сделано людьми
             <br />
-            assistant-ui
+            АО Портал
           </h1>
         </header>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -123,9 +123,9 @@ export default function Component() {
         </div>
 
         <div className="my-20 flex flex-col items-center gap-6">
-          <h2 className="text-4xl font-bold">Building something cool?</h2>
+          <h2 className="text-4xl font-bold">Делаете что-нибудь интересное?</h2>
           <Button asChild>
-            <a href="mailto:showcase@assistant-ui.com">Let us know about it!</a>
+            <a href="mailto:portal@portalos.ru">Дайте знать!</a>
           </Button>
         </div>
       </div>

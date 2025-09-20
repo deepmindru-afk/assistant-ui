@@ -7,10 +7,10 @@ import { Provider } from "./provider";
 
 export const metadata = {
   title: {
-    template: "%s | assistant-ui",
-    default: "assistant-ui",
+    template: "%s | АО Портал",
+    default: "Портал",
   },
-  description: "The TypeScript/React library for AI Chat",
+  description: "ИИ-агенты",
 };
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -32,7 +32,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           defer
           src="/umami/script.js"
           data-website-id="6f07c001-46a2-411f-9241-4f7f5afb60ee"
-          data-domains="www.assistant-ui.com"
+          data-domains="www.portalos.ru"
         ></script>
 
         <Script

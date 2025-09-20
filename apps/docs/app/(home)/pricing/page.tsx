@@ -24,7 +24,7 @@ export default function PricingPage() {
 
         <p className="mx-auto mt-4 mb-4 w-full max-w-[1000px] text-xs text-muted-foreground">
           <strong>*MAU:</strong> Monthly Active Users who send at least one
-          message via assistant-ui. Are you a B2C app?{" "}
+          message. Are you a B2C app?{" "}
           <a href="mailto:portal@portalos.ru" className="underline">
             Свяжитесь с нами
           </a>{" "}

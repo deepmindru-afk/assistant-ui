@@ -6,7 +6,7 @@ export async function GET() {
   const scanned: string[] = [];
   scanned.push("# Docs");
   const map = new Map<string, string[]>();
-  const baseUrl = "https://assistant-ui.com";
+  const baseUrl = "https://www.portalos.ru";
 
   for (const page of getPages()) {
     const dir = page.slugs[0] || "root";

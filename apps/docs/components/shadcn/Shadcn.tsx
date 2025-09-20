@@ -46,7 +46,7 @@ const TopLeft: FC = () => {
         alt="logo"
         className="inline size-4 dark:hue-rotate-180 dark:invert"
       />
-      <span>assistant-ui</span>
+      <span>АО Портал</span>
     </div>
   );
 };
