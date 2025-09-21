@@ -1,39 +1,43 @@
+//import { createOpenAI } from "@ai-sdk/openai";
+import { convertToModelMessages, stepCountIs, streamText } from "ai";
+//import { kv } from "@vercel/kv";
+//import { Ratelimit } from "@upstash/ratelimit";
+import { frontendTools } from "@assistant-ui/react-ai-sdk";
+import { xai } from '@ai-sdk/xai';
+
 export const maxDuration = 30;
 
-export const POST = async (req: Request) => {
-  const { messages } = (await req.json()) as {
-    messages: { role: "user" | "assistant"; content: string }[];
-  };
+//const openai = createOpenAI({
+//  baseURL: "https://llm.portalos.online",
+  //apiKey:
+  //headers: {
+  //  'header-name': 'header-value',
+  //},
+//});
 
-  // remove the most recent user question
-  const { content: question, role } = messages.pop()!;
-  if (role !== "user" || !question) throw new Error("No question provided");
+//const ratelimit = new Ratelimit({
+//  redis: kv,
+//  limiter: Ratelimit.fixedWindow(5, "30s"),
+//});
 
-  const history = messages.reduce(
-    (pairs, msg, i, arr) => {
-      const next = arr[i + 1];
-      if (msg.role === "user" && next?.role === "assistant") {
-        pairs.push([msg.content, next.content]);
-      }
-      return pairs;
+export async function POST(req: Request) {
+  const { messages, tools } = await req.json();
+  //const ip = req.headers.get("x-forwarded-for") ?? "ip";
+  //const { success } = await ratelimit.limit(ip);
+  //if (!success) {
+  //  return new Response("Rate limit exceeded", { status: 429 });
+  //}
+
+  const result = streamText({
+    model: xai('grok-2-vision-1212'), //openai("mistral/mistral-large-latest"),
+    messages: convertToModelMessages(messages),
+    maxOutputTokens: 1200,
+    stopWhen: stepCountIs(10),
+    tools: {
+      ...frontendTools(tools),
     },
-    [] as [string, string][],
-  );
-
-  return fetch(process.env["ENTELLIGENCE_API_URL"]!, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env["ENTELLIGENCE_API_KEY"]}`,
-    },
-    body: JSON.stringify({
-      history,
-      question,
-      vectorDBUrl: "assistant-ui&assistant-ui",
-      advancedAgent: false,
-      githubUsername: "assistant-ui",
-      limitSources: 3,
-      enableArtifacts: false,
-    }),
+    onError: console.error,
   });
-};
+
+  return result.toUIMessageStreamResponse();
+}

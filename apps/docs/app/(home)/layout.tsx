@@ -48,7 +48,7 @@ function Footer(): React.ReactElement {
                 className="inline size-5 opacity-30 transition-opacity hover:opacity-100 dark:hue-rotate-180 dark:invert"
               />
             </Link>
-            <Link href="https://www.portalos.ru" target="_blank">
+            {/*<Link href="https://www.portalos.ru" target="_blank">
               <Image
                 src={githubIcon}
                 alt="GitHub icon"
@@ -62,6 +62,7 @@ function Footer(): React.ReactElement {
                 className="inline size-5 opacity-30 transition-opacity hover:opacity-100 dark:hue-rotate-180 dark:invert"
               />
             </Link>
+            */}
           </div>
           <div className="flex-grow" />
           <p className="text-sm text-foreground/30">

@@ -42,7 +42,7 @@ export default function HomePage() {
 
       <div className="mt-20 flex flex-col items-center gap-4">
         <h1 className="text-center text-2xl font-medium">
-          Доверия быстрорастущих компаний
+          Доверие быстрорастущих компаний
         </h1>
         <Logos />
       </div>
@@ -50,7 +50,7 @@ export default function HomePage() {
       <div className="my-20 flex flex-col gap-6">
         <div className="flex flex-col items-center gap-3 self-center sm:w-full sm:self-start lg:w-[unset] lg:self-center">
           <h1 className="self-start text-2xl font-medium sm:self-center">
-            Встаньте частью сообщества
+            Станьте частью сообщества
           </h1>
           <p>
             Присоединяйтесь к разработке на основе решений АО Портал

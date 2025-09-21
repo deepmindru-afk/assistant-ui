@@ -83,13 +83,13 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
   //  description: "Open Source implementation of OpenAI Canvas",
   //  secondaryTag: "OSS",
   //},
-  {
-    title: "Portal",
-    image: "/screenshot/portal.png",
-    tag: "Browser",
-    link: "https://www.portal.so/",
-    description: "AI executive assistant in the form of a browser",
-  },
+  //{
+  //  title: "Portal",
+  //  image: "/screenshot/portal.png",
+  //  tag: "Browser",
+  //  link: "https://www.portal.so/",
+  //  description: "AI executive assistant in the form of a browser",
+  //},
   //{
   //  title: "LangGraph Stockbroker",
   //  image: "/screenshot/stockbroker.png",
