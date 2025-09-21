@@ -5,7 +5,7 @@ import Image from "next/image";
 import icon from "../../public/favicon/icon.svg";
 import Link from "next/link";
 
-import xIcon from "./logos/x.svg";
+//import xIcon from "./logos/x.svg";
 //import githubIcon from "./logos/github.svg";
 //import discordIcon from "./logos/discord.svg";
 
