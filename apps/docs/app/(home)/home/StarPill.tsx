@@ -26,7 +26,7 @@ export function StarPill() {
           <div className="font-medium text-amber-600 dark:text-amber-400">
             {stars}
           </div>
-          <div className="ml-2 font-semibold">Star us on GitHub</div>
+          <div className="ml-2 font-semibold">Star</div>
         </span>
       </a>
     </div>
