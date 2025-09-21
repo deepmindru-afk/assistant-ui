@@ -6,8 +6,8 @@ import icon from "../../public/favicon/icon.svg";
 import Link from "next/link";
 
 import xIcon from "./logos/x.svg";
-import githubIcon from "./logos/github.svg";
-import discordIcon from "./logos/discord.svg";
+//import githubIcon from "./logos/github.svg";
+//import discordIcon from "./logos/discord.svg";
 
 export default function Layout({
   children,
