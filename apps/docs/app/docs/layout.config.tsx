@@ -60,14 +60,14 @@ export const baseOptions: HomeLayoutProps = {
       icon: <SparklesIcon />,
     },
     {
-      text: "Приложение",
-      url: "https://chat.portalos.ru",
-      icon: <CloudIcon />,
-    },
-    {
       text: "Цены",
       url: "/pricing",
       icon: <WalletIcon />,
+    },
+    {
+      text: "Приложение",
+      url: "https://chat.portalos.ru",
+      icon: <CloudIcon />,
     },
     {
       type: "icon",

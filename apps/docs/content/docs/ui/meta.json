@@ -1,8 +1,7 @@
 {
   "title": "shadcn/ui",
   "pages": [
-    "Thread",
     "Markdown",
-    "PartGrouping",
+    "PartGrouping"
   ]
 }
