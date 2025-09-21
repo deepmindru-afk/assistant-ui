@@ -52,10 +52,10 @@ export const Thread: FC = () => {
           <ThreadScrollToBottom />
           <Composer />
           <a
-            href="https://entelligence.ai/assistant-ui&assistant-ui?ref=assistant-ui"
+            href="https://www.portalos.ru"
             className="mt-2 flex justify-center gap-1 self-center text-xs opacity-25"
           >
-            In partnership with{" "}
+            Сделано людьми{" "}
             <Image
               src={entelligenceLogo}
               className="pt-0.5 invert dark:invert-0"
@@ -89,7 +89,7 @@ const ThreadWelcome: FC = () => {
       <div className="flex w-full max-w-[var(--thread-max-width)] flex-grow flex-col">
         <div className="flex w-full flex-grow flex-col items-center justify-center">
           <p className="mt-4 font-medium">
-            Ask any question about assistant-ui
+            задайте вопрос...
           </p>
         </div>
         <ThreadWelcomeSuggestions />
