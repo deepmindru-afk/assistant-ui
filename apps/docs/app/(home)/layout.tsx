@@ -41,14 +41,14 @@ function Footer(): React.ReactElement {
             </span>
           </Link>
           <div className="flex gap-4">
-            <Link href="https://www.portalos.ru" target="_blank">
+            {/*<Link href="https://www.portalos.ru" target="_blank">
               <Image
                 src={xIcon}
                 alt="X icon"
                 className="inline size-5 opacity-30 transition-opacity hover:opacity-100 dark:hue-rotate-180 dark:invert"
               />
             </Link>
-            {/*<Link href="https://www.portalos.ru" target="_blank">
+            <Link href="https://www.portalos.ru" target="_blank">
               <Image
                 src={githubIcon}
                 alt="GitHub icon"

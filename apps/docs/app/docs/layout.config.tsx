@@ -60,7 +60,7 @@ export const baseOptions: HomeLayoutProps = {
       icon: <SparklesIcon />,
     },
     {
-      text: "Live Chat",
+      text: "Приложение",
       url: "https://chat.portalos.ru",
       icon: <CloudIcon />,
     },

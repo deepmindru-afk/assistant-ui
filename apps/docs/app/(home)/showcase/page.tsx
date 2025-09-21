@@ -20,16 +20,25 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
     image: "/screenshot/chat-langchain.png",
     tag: "Приложение",
     link: "https://ui.portalos.ru/",
-    repositoryLink: "https://ui.portalos.ru",
+    //repositoryLink: "https://ui.portalos.ru",
     description: "Одно приложение для общения со всеми агентами",
     secondaryTag: "UI",
   },
   {
-    title: "Чат в реальном времени",
+    title: "Чат с агентом в реальном времени",
     image: "/screenshot/chat-langchain.png",
     tag: "Developer Tools",
     link: "https://chat.portalos.ru/",
-    repositoryLink: "https://chat.portalos.ru",
+    //repositoryLink: "https://chat.portalos.ru",
+    description: "Общайтесь с агентами в режиме реальном времени",
+    secondaryTag: "RT",
+  },
+  {
+    title: "Чат в реальном времени",
+    image: "/screenshot/chat-langchain.png",
+    tag: "Звонки и чаты с людьми и агентами в реальном времени",
+    link: "https://meet.portalos.ru/",
+    //repositoryLink: "https://chat.portalos.ru",
     description: "Общайтесь с агентами в режиме реальном времени",
     secondaryTag: "RT",
   },
@@ -183,7 +192,7 @@ function ShowcaseCard({
             </Button>
           )}
           <Button variant="outline" className="flex-1" asChild>
-            <a href={link}>Homepage</a>
+            <a href={link}>Попробовать</a>
           </Button>
         </div>
       </div>

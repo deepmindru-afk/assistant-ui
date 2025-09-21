@@ -2,16 +2,7 @@
   "title": "shadcn/ui",
   "pages": [
     "Thread",
-    "ThreadList",
-    "Attachment",
-    "AssistantModal",
-    "AssistantSidebar",
     "Markdown",
-    "Mermaid",
-    "SyntaxHighlighting",
-    "ToolFallback",
-    "ToolGroup",
     "PartGrouping",
-    "Scrollbar"
   ]
 }
