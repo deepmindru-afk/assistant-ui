@@ -48,19 +48,19 @@ const EXAMPLE_ITEMS: ShowcaseItem[] = [
     description: "Конфигурируемые интерфейсы Чатов",
     link: "/examples/ai-sdk",
   },
-  {
-    title: "Агент с постоянной памятью и навыками",
-    image: "/screenshot/examples/mem0.png",
-    description:
-      "Персонализированный агент с постоянной памятью и навыками.",
-    link: "/examples/mem0",
-  },
-  {
-    title: "Stockbroker",
-    image: "/screenshot/stockbroker.png",
-    description: "Агент помогающий человеку в выборе решений по акциям",
-    link: "/examples/stockbroker",
-  },
+  //{
+  //  title: "Агент с постоянной памятью и навыками",
+  //  image: "/screenshot/examples/mem0.png",
+  //  description:
+  //    "Персонализированный агент с постоянной памятью и навыками.",
+  //  link: "/examples/mem0",
+  //},
+  //{
+  //  title: "Stockbroker",
+  //  image: "/screenshot/stockbroker.png",
+  //  description: "Агент помогающий человеку в выборе решений по акциям",
+  //  link: "/examples/stockbroker",
+  //},
   {
     title: "Артефакты",
     image: "/screenshot/examples/artifacts.png",
@@ -74,14 +74,14 @@ const EXAMPLE_ITEMS: ShowcaseItem[] = [
   //  description: "Аналог ChatGPT's Canvas.",
   //  link: "https://github.com/langchain-ai/open-canvas",
   //},
-  {
-    title: "FastAPI",
-    image: "/screenshot/examples/fastapi-langgraph.png",
-    description:
-      "Интеграция с FastAPI",
-    link: "https://ui.portalos.ru",
-    //link: "https://github.com/Yonom/assistant-ui-langgraph-fastapi",
-  },
+  //{
+  //  title: "FastAPI",
+  //  image: "/screenshot/examples/fastapi-langgraph.png",
+  //  description:
+  //    "Интеграция с FastAPI",
+  //  link: "https://ui.portalos.ru",
+  //  //link: "https://github.com/Yonom/assistant-ui-langgraph-fastapi",
+  //},
 ];
 
 export default function Component() {
