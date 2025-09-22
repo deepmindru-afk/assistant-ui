@@ -3,9 +3,9 @@
 import { Shadcn } from "@/components/shadcn/Shadcn";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { TESTIMONIALS } from "@/components/testimonials/testimonials";
+//import { TESTIMONIALS } from "@/components/testimonials/testimonials";
 import { DiscordLogoIcon } from "@radix-ui/react-icons";
-import { TestimonialContainer } from "../../components/testimonials/TestimonialContainer";
+//import { TestimonialContainer } from "../../components/testimonials/TestimonialContainer";
 import { cn } from "@/lib/utils";
 import { CheckIcon, CopyIcon } from "lucide-react";
 //import athenaintel from "./logos/cust/athenaintel.png";
