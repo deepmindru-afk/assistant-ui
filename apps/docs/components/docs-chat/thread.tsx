@@ -23,7 +23,7 @@ import { MarkdownText } from "@/components/assistant-ui/markdown-text";
 import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
 
 //import entelligenceLogo from "@/app/(home)/logos/cust/entelligence.svg";
-import Image from "next/image";
+//import Image from "next/image";
 
 export const Thread: FC = () => {
   return (
