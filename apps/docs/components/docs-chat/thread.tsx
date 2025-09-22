@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { MarkdownText } from "@/components/assistant-ui/markdown-text";
 import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
 
-import entelligenceLogo from "@/app/(home)/logos/cust/entelligence.svg";
+//import entelligenceLogo from "@/app/(home)/logos/cust/entelligence.svg";
 import Image from "next/image";
 
 export const Thread: FC = () => {
@@ -56,12 +56,12 @@ export const Thread: FC = () => {
             className="mt-2 flex justify-center gap-1 self-center text-xs opacity-25"
           >
             Сделано людьми{" "}
-            <Image
+            {/*<Image
               src={entelligenceLogo}
               className="pt-0.5 invert dark:invert-0"
               alt="Entelligence Logo"
               width={70}
-            />
+            />*/}
           </a>
         </div>
       </ThreadPrimitive.Viewport>
@@ -108,7 +108,7 @@ const ThreadWelcomeSuggestions: FC = () => {
         autoSend
       >
         <span className="line-clamp-2 text-sm font-semibold text-ellipsis">
-          How can I install assistant-ui?
+          Как зайти в портал?
         </span>
       </ThreadPrimitive.Suggestion>
       <ThreadPrimitive.Suggestion
@@ -118,7 +118,7 @@ const ThreadWelcomeSuggestions: FC = () => {
         autoSend
       >
         <span className="line-clamp-2 text-sm font-semibold text-ellipsis">
-          Why should I use assistant-ui?
+          Как из него выйти?
         </span>
       </ThreadPrimitive.Suggestion>
     </div>
