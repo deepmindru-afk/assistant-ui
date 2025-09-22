@@ -68,18 +68,19 @@ const EXAMPLE_ITEMS: ShowcaseItem[] = [
       "Аналог Claude Artifacts. Да можете просить агента создавать сайты.",
     link: "/examples/artifacts",
   },
-  {
-    title: "Open Canvas",
-    image: "/screenshot/open-canvas.png",
-    description: "Аналог ChatGPT's Canvas.",
-    link: "https://github.com/langchain-ai/open-canvas",
-  },
+  //{
+  //  title: "Open Canvas",
+  //  image: "/screenshot/open-canvas.png",
+  //  description: "Аналог ChatGPT's Canvas.",
+  //  link: "https://github.com/langchain-ai/open-canvas",
+  //},
   {
     title: "FastAPI",
     image: "/screenshot/examples/fastapi-langgraph.png",
     description:
       "Интеграция с FastAPI",
-    link: "https://github.com/Yonom/assistant-ui-langgraph-fastapi",
+    link: "https://ui.portalos.ru",
+    //link: "https://github.com/Yonom/assistant-ui-langgraph-fastapi",
   },
 ];
 
