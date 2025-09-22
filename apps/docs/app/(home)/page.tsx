@@ -8,11 +8,11 @@ import { DiscordLogoIcon } from "@radix-ui/react-icons";
 import { TestimonialContainer } from "../../components/testimonials/TestimonialContainer";
 import { cn } from "@/lib/utils";
 import { CheckIcon, CopyIcon } from "lucide-react";
-import athenaintel from "./logos/cust/athenaintel.png";
-import browseruse from "./logos/cust/browseruse.svg";
-import entelligence from "./logos/cust/entelligence.svg";
+//import athenaintel from "./logos/cust/athenaintel.png";
+//import browseruse from "./logos/cust/browseruse.svg";
+//import entelligence from "./logos/cust/entelligence.svg";
 import langchain from "./logos/cust/langchain.svg";
-import stack from "./logos/cust/stack.svg";
+//import stack from "./logos/cust/stack.svg";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { DocsRuntimeProvider } from "./DocsRuntimeProvider";
@@ -62,24 +62,25 @@ export default function HomePage() {
               href="https://www.portalos.ru"
             >
               <DiscordLogoIcon className="mr-2 size-4 text-indigo-600" /> Join
-              our Discord
+              Макс мессенджер
             </a>
             <a
               className={buttonVariants({ variant: "outline" })}
               href="https://www.portalos.ru"
             >
-              <span className="mr-2">🌟</span> поставьте нам звезду
+              <span className="mr-2">🌟</span> лайк
             </a>
           </div>
         </div>
 
-        <div className="relative mx-auto max-h-[500px] w-full max-w-screen-xl overflow-hidden">
+        {/* <div className="relative mx-auto max-h-[500px] w-full max-w-screen-xl overflow-hidden">
           <TestimonialContainer
             testimonials={TESTIMONIALS}
             className="sm:columns-2 lg:columns-3 xl:columns-4"
           />
           <div className="pointer-events-none absolute -bottom-8 left-0 z-10 h-[120px] w-full bg-gradient-to-t from-background via-background" />
         </div>
+        */}
 
         <div className="flex justify-center">
           <div className="relative flex h-max w-full flex-col items-center justify-between gap-5 rounded-3xl border p-6 sm:w-max sm:flex-row sm:p-10 lg:h-32 lg:w-full lg:px-16">
@@ -106,7 +107,7 @@ function Hero() {
         Интерфейс ChatGPT в вашем приложении
       </h1>
       <p className="mb-8 text-muted-foreground md:text-xl">
-        Платформа портал – библиотека для разработки решений на основе ИИ{" "}
+        Платформа портал – разработка решений на основе ИИ{" "}
         <span className="text-foreground">AI Chat</span>.<br />
         Сделано на основе <span className="text-foreground">shadcn/ui</span> и{" "}
         <span className="text-foreground">Tailwind</span>.
@@ -134,7 +135,7 @@ function Hero() {
           При поддержке{" "}
           <Image
             src={ycombinator}
-            alt="Y Combinator"
+            alt="Игрик-комбинатор"
             className="mb-1 inline"
             width={140}
           />
@@ -161,24 +162,24 @@ const Logos = () => {
         className="inline-block h-[28px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
-        src={athenaintel}
-        alt="Microsoft"
-        className="inline-block h-11 w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
-      />
-      <Image
-        src={browseruse}
+        src={langchain}
         alt="IBM"
         className="inline-block h-[26px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
-        src={entelligence}
-        alt="SpaceX"
-        className="mt-1 inline-block h-[22px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
+        src={langchain}
+        alt="IBM"
+        className="inline-block h-[26px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
       <Image
-        src={stack}
-        alt="Stack"
-        className="mt-0.5 inline-block h-[22px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
+        src={langchain}
+        alt="IBM"
+        className="inline-block h-[26px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
+      />
+      <Image
+        src={langchain}
+        alt="IBM"
+        className="inline-block h-[26px] w-auto opacity-50 invert transition-opacity hover:opacity-100 dark:invert-0"
       />
     </div>
   );
