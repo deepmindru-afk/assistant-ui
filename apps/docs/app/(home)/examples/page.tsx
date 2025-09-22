@@ -13,15 +13,15 @@ type ShowcaseItem = {
 
 const EXAMPLE_ITEMS: ShowcaseItem[] = [
   {
-    title: "Modal",
+    title: "Всплывающая кнопка",
     image: "/screenshot/examples/modal.png",
-    description: "Floating button that opens an AI assistant chat box.",
+    description: "Всплывающая кнопка с агентом.",
     link: "/examples/modal",
   },
   {
-    title: "Form Filling Co-Pilot",
+    title: "real-time агент для вашего сайта",
     image: "/screenshot/examples/form-demo.png",
-    description: "AssistantSidebar copilot which fills forms for the user.",
+    description: "агент в реальном времени в реальном пространстве.",
     link: "/examples/form-demo",
   },
   {
