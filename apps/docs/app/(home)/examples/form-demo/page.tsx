@@ -10,7 +10,7 @@ export default function Component() {
           <iframe
             title="мультимодальные агенты в реальном времени"
             className="h-full w-full border-none"
-            src="https://chat.portalos.ru"
+            src="https://btn.portalos.online/popup"
           />
         </div>
       </div>
