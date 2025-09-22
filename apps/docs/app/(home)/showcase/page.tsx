@@ -17,7 +17,7 @@ type ShowcaseItem = {
 const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     title: "ПорталUI",
-    image: "/screenshot/chat-langchain.png",
+    image: "/screenshot/examples/Dialog.png",
     tag: "Приложение",
     link: "https://ui.portalos.ru/",
     //repositoryLink: "https://ui.portalos.ru",
@@ -26,7 +26,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
   },
   {
     title: "Чат с агентом в реальном времени",
-    image: "/screenshot/chat-langchain.png",
+    image: "/screenshot/examples/Dialog.png",
     tag: "Developer Tools",
     link: "https://chat.portalos.ru/",
     //repositoryLink: "https://chat.portalos.ru",
@@ -35,7 +35,7 @@ const SHOWCASE_ITEMS: ShowcaseItem[] = [
   },
   {
     title: "Чат в реальном времени",
-    image: "/screenshot/chat-langchain.png",
+    image: "/screenshot/examples/Dialog.png",
     tag: "Звонки и чаты с людьми и агентами в реальном времени",
     link: "https://meet.portalos.ru/",
     //repositoryLink: "https://chat.portalos.ru",
