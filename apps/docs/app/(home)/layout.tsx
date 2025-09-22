@@ -37,7 +37,7 @@ function Footer(): React.ReactElement {
               className="inline size-7 dark:hue-rotate-180 dark:invert"
             />
             <span className="text-2xl font-medium text-black dark:text-white">
-              Portal-chatui
+              АО Портал
             </span>
           </Link>
           <div className="flex gap-4">
