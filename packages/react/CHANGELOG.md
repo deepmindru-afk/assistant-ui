@@ -1,5 +1,23 @@
 # @assistant-ui/react
 
+## 0.11.18
+
+### Patch Changes
+
+- 057cdc7: fix: notify when suggestions change
+
+## 0.11.17
+
+### Patch Changes
+
+- 2bbe604: feat: createMssageConverter toThreadMessages isRunning support
+
+## 0.11.16
+
+### Patch Changes
+
+- cc9945b: feat: MessageProvider API
+
 ## 0.11.15
 
 ### Patch Changes
