@@ -39,14 +39,15 @@ const customEvent = {
 };
 
 describe("useLangGraphRuntime", () => {
-  const wrapperFactory =
-    (runtime: AssistantRuntime) =>
-    // eslint-disable-next-line react/display-name
-    ({ children }: { children: ReactNode }) => (
+  const wrapperFactory = (runtime: AssistantRuntime) => {
+    const Wrapper = ({ children }: { children: ReactNode }) => (
       <AssistantRuntimeProvider runtime={runtime}>
         {children}
       </AssistantRuntimeProvider>
     );
+    Wrapper.displayName = "TestWrapper";
+    return Wrapper;
+  };
 
   it("should handle metadata events", async () => {
     const onMetadata = vi.fn();
@@ -71,6 +72,9 @@ describe("useLangGraphRuntime", () => {
     const { result: sendResult } = renderHook(() => useLangGraphSend(), {
       wrapper,
     });
+
+    // Wait a tick for the runtime to be fully mounted
+    await Promise.resolve();
 
     act(() => {
       sendResult.current(
@@ -108,14 +112,15 @@ describe("useLangGraphRuntime", () => {
       {},
     );
 
-    const wrapper = ({ children }: { children: ReactNode }) => (
-      <AssistantRuntimeProvider runtime={runtimeResult.current}>
-        {children}
-      </AssistantRuntimeProvider>
-    );
+    const wrapper = wrapperFactory(runtimeResult.current);
 
     const { result: sendResult } = renderHook(() => useLangGraphSend(), {
       wrapper,
+    });
+
+    // Wait a tick for the runtime to be fully mounted
+    await waitFor(() => {
+      expect(sendResult.current).toBeDefined();
     });
 
     act(() => {
@@ -154,14 +159,15 @@ describe("useLangGraphRuntime", () => {
       {},
     );
 
-    const wrapper = ({ children }: { children: ReactNode }) => (
-      <AssistantRuntimeProvider runtime={runtimeResult.current}>
-        {children}
-      </AssistantRuntimeProvider>
-    );
+    const wrapper = wrapperFactory(runtimeResult.current);
 
     const { result: sendResult } = renderHook(() => useLangGraphSend(), {
       wrapper,
+    });
+
+    // Wait a tick for the runtime to be fully mounted
+    await waitFor(() => {
+      expect(sendResult.current).toBeDefined();
     });
 
     act(() => {
@@ -204,6 +210,11 @@ describe("useLangGraphRuntime", () => {
 
     const { result: sendResult } = renderHook(() => useLangGraphSend(), {
       wrapper,
+    });
+
+    // Wait a tick for the runtime to be fully mounted
+    await waitFor(() => {
+      expect(sendResult.current).toBeDefined();
     });
 
     act(() => {
@@ -252,6 +263,11 @@ describe("useLangGraphRuntime", () => {
 
     const { result: sendResult } = renderHook(() => useLangGraphSend(), {
       wrapper,
+    });
+
+    // Wait a tick for the runtime to be fully mounted
+    await waitFor(() => {
+      expect(sendResult.current).toBeDefined();
     });
 
     act(() => {

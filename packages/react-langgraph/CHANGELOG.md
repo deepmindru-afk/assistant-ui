@@ -1,5 +1,37 @@
 # @assistant-ui/react-langgraph
 
+## 0.7.0
+
+### Minor Changes
+
+- c5188d9: feat: revamp langgraph thread management integration
+
+### Patch Changes
+
+- Updated dependencies [7a020fa]
+- Updated dependencies [7a020fa]
+- Updated dependencies [c5188d9]
+  - @assistant-ui/react@0.11.21
+
+## 0.6.11
+
+### Patch Changes
+
+- 8812f86: chore: update deps
+- Updated dependencies [8812f86]
+  - assistant-stream@0.2.30
+
+## 0.6.10
+
+### Patch Changes
+
+- 9e03f7a: fix: Handle undefined extras in useLangGraphInterruptState
+
+  Fixed an issue where useLangGraphInterruptState would throw errors when thread extras are undefined (e.g., with EMPTY_THREAD_CORE). The hook now safely returns undefined when extras are not available, and uses useAssistantApi for imperative operations in useLangGraphSend to avoid similar issues.
+
+- Updated dependencies [94fcc39]
+  - @assistant-ui/react@0.11.20
+
 ## 0.6.9
 
 ### Patch Changes

@@ -4,6 +4,7 @@ import { baseOptions } from "../docs/layout.config";
 import Image from "next/image";
 import icon from "../../public/favicon/icon.svg";
 import Link from "next/link";
+import { HomepageHiringBanner } from "@/components/home/HomepageHiringBanner";
 
 //import xIcon from "./logos/x.svg";
 //import githubIcon from "./logos/github.svg";
@@ -16,6 +17,7 @@ export default function Layout({
 }): React.ReactElement {
   return (
     <HomeLayout {...baseOptions}>
+      <HomepageHiringBanner />
       {children}
       <Footer />
     </HomeLayout>
@@ -78,9 +80,16 @@ function Footer(): React.ReactElement {
             <FooterLink href="/pricing">Цены</FooterLink>
           </div>
           <div className="flex flex-col justify-center gap-4">
+<<<<<<< HEAD
             <p className="text-sm">О компании</p>
             <FooterLink href="https://www.portalos.ru">
               Контакты
+=======
+            <p className="text-sm">Company</p>
+            <FooterLink href="/careers">Careers</FooterLink>
+            <FooterLink href="https://cal.com/simon-farshid/assistant-ui">
+              Contact Sales
+>>>>>>> upstream/main
             </FooterLink>
             <FooterLink href="/blog">Блог</FooterLink>
             <FooterLink href="https://www.portalos.ru">
