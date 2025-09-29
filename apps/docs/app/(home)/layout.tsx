@@ -80,16 +80,9 @@ function Footer(): React.ReactElement {
             <FooterLink href="/pricing">Цены</FooterLink>
           </div>
           <div className="flex flex-col justify-center gap-4">
-<<<<<<< HEAD
             <p className="text-sm">О компании</p>
             <FooterLink href="https://www.portalos.ru">
               Контакты
-=======
-            <p className="text-sm">Company</p>
-            <FooterLink href="/careers">Careers</FooterLink>
-            <FooterLink href="https://cal.com/simon-farshid/assistant-ui">
-              Contact Sales
->>>>>>> upstream/main
             </FooterLink>
             <FooterLink href="/blog">Блог</FooterLink>
             <FooterLink href="https://www.portalos.ru">
