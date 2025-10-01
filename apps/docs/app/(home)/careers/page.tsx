@@ -48,7 +48,7 @@ export default function CareersPage(): ReactElement {
             Don&apos;t see the perfect fit? We&apos;d still love to hear from
             you - drop us a note at
             <span className="px-1 font-medium text-foreground">
-              <a href="mailto:hello@portalos.ru">hello@assistant-ui.com</a>
+              <a href="mailto:hello@portalos.ru">hello@portalos.ru</a>
             </span>
             .
           </p>
