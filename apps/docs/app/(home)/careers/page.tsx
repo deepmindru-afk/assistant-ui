@@ -6,7 +6,7 @@ import { careers, CareerPage } from "@/app/source";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Help build the future of agentic UI. Explore open roles at assistant-ui.",
+    "Help build the future of agentic UI. Explore open roles at Portal.",
 };
 
 const roleOrder = (value: unknown, fallback: number) => {
@@ -48,7 +48,7 @@ export default function CareersPage(): ReactElement {
             Don&apos;t see the perfect fit? We&apos;d still love to hear from
             you - drop us a note at
             <span className="px-1 font-medium text-foreground">
-              <a href="mailto:hello@assistant-ui.com">hello@assistant-ui.com</a>
+              <a href="mailto:hello@portalos.ru">hello@assistant-ui.com</a>
             </span>
             .
           </p>
