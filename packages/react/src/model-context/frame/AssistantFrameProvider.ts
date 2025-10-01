@@ -133,6 +133,11 @@ export class AssistantFrameProvider {
           ? await tool.execute(message.args, {
               toolCallId: message.id,
               abortSignal: new AbortController().signal,
+              human: async () => {
+                throw new Error(
+                  "Tool human input is not supported in frame context",
+                );
+              },
             })
           : undefined;
       } catch (e) {

@@ -359,13 +359,167 @@ const RefundTool = makeAssistantTool({
 });
 ```
 
+### Tool Human Input
+
+Tools can pause their execution to request user input or approval before continuing. This is useful for:
+
+- Requesting user confirmation for sensitive operations
+- Collecting additional information mid-execution
+- Implementing progressive disclosure workflows
+- Building interactive, multi-step tool experiences
+
+```tsx
+import { makeAssistantTool, tool } from "@assistant-ui/react";
+import { z } from "zod";
+
+const confirmationTool = tool({
+  description: "Send an email with confirmation",
+  parameters: z.object({
+    to: z.string(),
+    subject: z.string(),
+    body: z.string(),
+  }),
+  execute: async ({ to, subject, body }, { human }) => {
+    // Request user confirmation before sending
+    const confirmed = await human({
+      type: "confirmation",
+      action: "send-email",
+      details: { to, subject },
+    });
+
+    if (!confirmed) {
+      return {
+        status: "cancelled",
+        message: "Email sending cancelled by user",
+      };
+    }
+
+    // Proceed with sending the email
+    await sendEmail({ to, subject, body });
+    return { status: "sent", message: `Email sent to ${to}` };
+  },
+});
+
+const EmailTool = makeAssistantTool({
+  ...confirmationTool,
+  toolName: "sendEmail",
+  render: ({ args, result, interrupt, resume }) => {
+    // The interrupt payload is available when the tool is waiting for user input
+    if (interrupt) {
+      return (
+        <div className="confirmation-dialog">
+          <h3>Confirm Email</h3>
+          <p>Send email to: {interrupt.payload.details.to}</p>
+          <p>Subject: {interrupt.payload.details.subject}</p>
+          <div className="actions">
+            <button onClick={() => resume(true)}>Confirm</button>
+            <button onClick={() => resume(false)}>Cancel</button>
+          </div>
+        </div>
+      );
+    }
+
+    // Show the result after completion
+    if (result) {
+      return (
+        <div className="email-result">
+          <p>{result.message}</p>
+        </div>
+      );
+    }
+
+    // Show loading state
+    return <div>Preparing email...</div>;
+  },
+});
+```
+
+#### Human Input Behavior
+
+- **Payload**: The object passed to `human()` is available in the `render` function as `interrupt.payload`
+- **Type**: The `interrupt` object has the structure `{ type: "human", payload: ... }`
+- **Resume**: Call `resume(payload)` to continue execution - the payload becomes the resolved value of the `human()` call
+- **Multiple Requests**: If `human()` is called multiple times, previous requests are automatically rejected with an error
+- **Cancellation**: If the tool execution is aborted (e.g., user cancels the message), all pending requests are rejected
+
+#### Advanced Human Input Patterns
+
+You can use human input for complex multi-step interactions:
+
+```tsx
+const wizardTool = tool({
+  description: "Multi-step data processing wizard",
+  parameters: z.object({
+    dataSource: z.string(),
+  }),
+  execute: async ({ dataSource }, { human }) => {
+    // Step 1: Load data
+    const data = await loadData(dataSource);
+
+    // Step 2: Request user to select columns
+    const selectedColumns = await human({
+      type: "column-selection",
+      availableColumns: data.columns,
+    });
+
+    // Step 3: Request processing options
+    const options = await human({
+      type: "processing-options",
+      columns: selectedColumns,
+    });
+
+    // Step 4: Process data with user selections
+    const result = await processData(data, selectedColumns, options);
+    return result;
+  },
+});
+
+const WizardTool = makeAssistantTool({
+  ...wizardTool,
+  toolName: "dataWizard",
+  render: ({ args, result, interrupt, resume }) => {
+    if (interrupt?.payload.type === "column-selection") {
+      return (
+        <ColumnSelector
+          columns={interrupt.payload.availableColumns}
+          onSelect={(cols) => resume(cols)}
+        />
+      );
+    }
+
+    if (interrupt?.payload.type === "processing-options") {
+      return (
+        <ProcessingOptions
+          columns={interrupt.payload.columns}
+          onConfirm={(opts) => resume(opts)}
+        />
+      );
+    }
+
+    if (result) {
+      return <ResultDisplay data={result} />;
+    }
+
+    return <div>Loading...</div>;
+  },
+});
+```
+
+<Callout type="note">
+  When a tool calls `human()` multiple times (e.g., for multi-step
+  workflows), each new request automatically rejects any previous pending
+  request. Make sure to handle potential errors if you need to support
+  cancellation of earlier steps.
+</Callout>
+
 ### MCP (Model Context Protocol) Tools
 
 Integration with MCP servers using AI SDK v5's experimental MCP support:
 
 <Callout type="warning">
-  MCP support in AI SDK v5 is experimental. The API may change in future releases.
-  Make sure to install the MCP SDK: `npm install @modelcontextprotocol/sdk`
+  MCP support in AI SDK v5 is experimental. The API may change in future
+  releases. Make sure to install the MCP SDK: `npm install
+  @modelcontextprotocol/sdk`
 </Callout>
 
 ```tsx
@@ -414,15 +568,13 @@ import { SSEClientTransport } from "@modelcontextprotocol/sdk/client/sse.js";
 // HTTP transport
 const httpClient = await experimental_createMCPClient({
   transport: new StreamableHTTPClientTransport(
-    new URL("http://localhost:3000/mcp")
+    new URL("http://localhost:3000/mcp"),
   ),
 });
 
 // Server-Sent Events transport
 const sseClient = await experimental_createMCPClient({
-  transport: new SSEClientTransport(
-    new URL("http://localhost:3000/sse")
-  ),
+  transport: new SSEClientTransport(new URL("http://localhost:3000/sse")),
 });
 ```
 
@@ -560,8 +712,20 @@ Tools receive additional context during execution:
 execute: async (args, context) => {
   // context.abortSignal - AbortSignal for cancellation
   // context.toolCallId - Unique identifier for this invocation
+  // context.human - Function to request human input
+
+  // Example: Request user confirmation
+  const userResponse = await context.human({
+    message: "Are you sure?",
+  });
 };
 ```
+
+The execution context provides:
+
+- **`abortSignal`**: An `AbortSignal` that triggers when the tool execution is cancelled
+- **`toolCallId`**: A unique identifier for this specific tool invocation
+- **`human`**: A function that pauses execution and requests user input. The payload passed to `human()` becomes available in the render function, and the value passed to `resume()` becomes the resolved value of the `human()` call
 
 ## Runtime Integration
 

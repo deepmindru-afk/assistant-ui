@@ -30,7 +30,9 @@ const TextMessagePartClient = resource(
       addToolResult: () => {
         throw new Error("Not supported");
       },
-      __internal_getRuntime: () => null,
+      resumeToolCall: () => {
+        throw new Error("Not supported");
+      },
     });
   },
 );

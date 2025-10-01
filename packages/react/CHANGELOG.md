@@ -1,5 +1,38 @@
 # @assistant-ui/react
 
+## 0.11.24
+
+### Patch Changes
+
+- 4a1e4cf: Deprecate `autoSend` and `method` in favor of `send` and `clearComposer`
+
+  ```tsx
+  <ThreadPrimitive.Suggestion
+    prompt="Tell me about React hooks"
+    send // same as autoSend=true
+    clearComposer // same as method="replace", defaults to true
+  />
+  ```
+
+  When `send` and `clearComposer` are `false`, the suggestion is appended to existing user input
+
+## 0.11.23
+
+### Patch Changes
+
+- 3caad00: refactor: rename interrupt -> human for tool input handling
+- Updated dependencies [3caad00]
+  - assistant-stream@0.2.33
+
+## 0.11.22
+
+### Patch Changes
+
+- e8d6d7b: feat: revamp Assistant augmentation mechanism
+- e81784b: feat: Tool Call interrupt() resume() API
+- Updated dependencies [e81784b]
+  - assistant-stream@0.2.32
+
 ## 0.11.21
 
 ### Patch Changes
