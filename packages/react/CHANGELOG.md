@@ -1,5 +1,27 @@
 # @assistant-ui/react
 
+## 0.11.28
+
+### Patch Changes
+
+- fix: useExternalMessageConverter Tool subagent messages support
+
+## 0.11.27
+
+### Patch Changes
+
+- e6a46e4: chore: update deps
+- Updated dependencies [e6a46e4]
+  - assistant-stream@0.2.34
+  - assistant-cloud@0.1.3
+  - @assistant-ui/tap@0.1.2
+
+## 0.11.26
+
+### Patch Changes
+
+- feat: Add support for nested tool calls in assistant transport. Tool calls can now include a `messages` field containing nested `ThreadMessage[]`, enabling subagent tool calls to be automatically invoked by `useToolInvocations`.
+
 ## 0.11.25
 
 ### Patch Changes
